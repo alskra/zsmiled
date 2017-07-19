@@ -23,34 +23,42 @@
 }
 
 
-.glyphicon-cancel:before {
+.glyphicon-angle-left:before {
   content: "\E001";
 }
 
-.glyphicon-icon-navigation-shapka:before {
+.glyphicon-angle-right:before {
   content: "\E002";
 }
 
-.glyphicon-icon-phone-shapka:before {
+.glyphicon-cancel:before {
   content: "\E003";
 }
 
-.glyphicon-icon-search:before {
+.glyphicon-icon-navigation-shapka:before {
   content: "\E004";
 }
 
-.glyphicon-menu-button:before {
+.glyphicon-icon-phone-shapka:before {
   content: "\E005";
 }
 
-.glyphicon-menu-lines:before {
+.glyphicon-icon-search:before {
   content: "\E006";
 }
 
-.glyphicon-menu-options:before {
+.glyphicon-menu-button:before {
   content: "\E007";
 }
 
-.glyphicon-menu:before {
+.glyphicon-menu-lines:before {
   content: "\E008";
+}
+
+.glyphicon-menu-options:before {
+  content: "\E009";
+}
+
+.glyphicon-menu:before {
+  content: "\E00A";
 }

@@ -1,111 +1,119 @@
-.slider-main
+.slider-main {
   overflow hidden
-  height calc(100vh - 3.75rem)
-  background-color white
-  border-bottom 1px solid #dfdfdf
-  p
+  height rem(400)
+  margin 0 (- ($grid-gutter-width/2)) rem(30)
+  p {
     margin 0
-  .slick-list, .slick-track, .slick-slide
+  }
+  .slick-list, .slick-track, .slick-slide {
     height 100%
-  .form-order, .btn
-    text-shadow none
+  }
+  .slick-prev, .slick-next {
+    width rem(40)
+    height rem(40)
+    font-size rem(20)
+    line-height 1em
+    padding 0
+    background rgba(#cbcbcb, 0.5)
+    border-radius 50%
+    position absolute
+    top 50%
+    z-index 10
+    margin rem(-20) 0
+  }
+  .slick-prev {
+    padding-right rem(3)
+    left rem(10)
+  }
+  .slick-next {
+    padding-left rem(3)
+    right rem(10)
+  }
 
-  &__item
+  &__item {
     position relative
+  }
 
-  &__img
+  &__img {
     position absolute
     top 0
     left 0
+  }
 
-  &__content
-    text-shadow 0 1px 0 rgba(white, 0.7)
-    padding rem(30px) 0
+  &__content {
+    padding rem(45) rem(30)
     opacity 1
     transition 0.2s linear
     position relative
-    .loading &
+    .loading & {
       opacity 0
+    }
+  }
 
-  &__title
-    overflow hidden
-    color #888
-    font-size 7vh
-    font-weight 300
+  &__title {
+    color #134273
+    font-family 'Plumb', sans-serif
+    font-size rem(37)
+    font-weight 700
     line-height 1.25em
-    max-height 1.25em*3
-    line-clamp 3
-    margin 0 0 0.5em
-
-  &__text
-    overflow hidden
-    color #666
-    font-size 4vh
-    line-height (24/18)em
-    max-height (24/18)em*4
-    line-clamp 4
-    margin 0 0 2em
-
-  @media (min-width $screen-sm-min)
-    height rem(600px)
-
-    &__content
-      padding-left rem(55px)
-
-    &__title
-      font-size rem(40px)
-      max-height 1.25em*2
-      line-clamp 2
-
-    &__text
-      margin-bottom 3em
-
-    &__text
-      font-size rem(18px)
-
-    &__article
-      color #666
-      font-size rem(18px)
-      line-height (24/18)em
-      padding 0 0 0 rem(110px)
-      position relative
-      margin 0 0 rem(50px)
-
-    &__article-icon
-      color $blue-1
-      text-align center
-      font-size rem(73px)
-      line-height 1em
-      width rem(90px)
+    text-transform uppercase
+    position relative
+    margin 0 0 rem(15)
+    &:before {
+      content attr(data-text)
+      color transparent
+      text-shadow 0 0 10px #fefefc, 0 0 20px #fefefc, 0 0 30px #fefefc, 0 0 40px #fefefc, 0 0 50px #fefefc, 0 0 60px #fefefc, 0 0 70px #fefefc, 0 0 80px #fefefc, 0 0 90px #fefefc, 0 0 100px #fefefc
       position absolute
-      top 0.3rem
+      top 0
+      right 0
+      bottom 0
       left 0
-      text-shadow none
-      &.glyphicon-sister
-        font-size rem(74px)
-      &.glyphicon-heart
-        font-size rem(64px)
-
-    &__article-title
-      font-size rem(24px)
-      text-overflow ellipsis
+    }
+    &:after {
+      content attr(data-text)
+      display block
       overflow hidden
-      margin 0 0 0.5em
+      max-height 1.25em*4
+      line-clamp 4
+      position relative
+    }
+  }
 
-    &__article-text
-      overflow hidden
-      max-height (24/18)em*2
-      line-clamp 2
+  &__btn {
+    position relative
+    z-index 1
+  }
 
-    &__action
-      color $black-1
-      font-size rem(24px)
-      p&
-        margin-bottom 1em
+  @media (min-width $screen-sm-min) {
 
-  @media (min-width $screen-md-min)
-    height rem(790px)
+  }
 
-    &__content
-      padding-top rem(65px)
-      padding-bottom rem(65px)
+  @media (min-width $screen-md-min) {
+    height rem(577)
+    margin-left 0
+    margin-right 0
+    .slick-prev, .slick-next {
+      width rem(60)
+      height rem(60)
+      font-size rem(30)
+      margin rem(-30) 0
+    }
+    .slick-prev {
+      left rem(20)
+    }
+    .slick-next {
+      right rem(20)
+    }
+
+    &__content {
+      text-align right
+      margin-left 50%
+    }
+  }
+
+  @media (min-width $screen-lg-min) {
+    &__content {
+      margin-left 63%
+    }
+  }
+}

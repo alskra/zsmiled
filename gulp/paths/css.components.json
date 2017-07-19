@@ -1,4 +1,5 @@
 [
+  "sources/static/fonts/Plumb/Plumb.css",
   "sources/static/fonts/glyphicons/glyphicons.css",
   "sources/components/bootstrap/css/index.styl",
   "sources/components/img-object-fit/img-object-fit.css",
