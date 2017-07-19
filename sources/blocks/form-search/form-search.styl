@@ -27,7 +27,6 @@
     flex none
     display block !important
     width rem(170)
-    height rem(25)
     position relative
     top auto
     right auto
@@ -41,8 +40,18 @@
     &__btn {
       width rem(25)
       height rem(25)
+      padding 0
       background none
       border 0
+      border-radius rem(6)
+      position absolute
+      top 0
+      right 0
+      &:before {
+        color white
+        font-size rem(18)
+        line-height 1em
+      }
     }
   }
 
