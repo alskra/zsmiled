@@ -25,7 +25,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3
   margin-top 0
-  margin-bottom ($headings-line-height / 1)em
+  margin-bottom ($line-height-computed / 1)
 
   small,
   .small
@@ -35,7 +35,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6
   margin-top 0
-  margin-bottom ($headings-line-height / 1)em
+  margin-bottom ($line-height-computed / 1)
 
   small,
   .small
@@ -64,7 +64,7 @@ h6, .h6
 // -------------------------
 
 p
-  margin 0 0 ($line-height-base / 1)em
+  margin 0 0 ($line-height-computed / 1)
 
 .rouble
   font-family 'rouble';
@@ -185,27 +185,14 @@ mark,
 ul,
 ol
   margin-top 0
-  margin-bottom ($line-height-base / 1)em
+  margin-bottom ($line-height-computed / 1)
   ul,
   ol
     margin-bottom 0
 
-/*ul
+ul
   list-style none
-  padding-left 17px
-  li
-    position relative
-    margin-bottom rem-calc(13)
-    &:before
-      color $green-1
-      font-family 'glyphicons'
-      content: '\E001';
-      position absolute
-      top 0
-      left -17px
-      transform-origin 0 50%
-      transform scale(0.5) translateY(2px)
-      pointer-events none*/
+  padding-left rem(20)
 
 // List options
 
@@ -227,7 +214,7 @@ ol
 // Description Lists
 dl
   margin-top 0 // Remove browser default
-  margin-bottom ($line-height-base)em
+  margin-bottom ($line-height-computed / 1)
 
 dt,
 dd
@@ -238,7 +225,7 @@ dt
 
 dd
   margin-left 0 // Undo browser default
-  margin-bottom ($line-height-base)em
+  margin-bottom ($line-height-computed / 1)
 
 // Horizontal description lists
 //
@@ -278,12 +265,13 @@ abbr[data-original-title]
 
 // Blockquotes
 blockquote
-  padding 0 rem(25)
-  margin ($line-height-base)em 0 ($line-height-base)em rem(25)
-  //color #6587a8
-  font-size $blockquote-font-size
-  line-height 1.25
-  border-left 3px solid $blockquote-border-color
+  padding rem(15) rem(30)
+  margin rem(20) 0
+  color $blue-2
+  font-size inherit
+  line-height inherit
+  border 0
+  background #c7e8f3
 
   p,
   ul,
