@@ -1,37 +1,38 @@
 -
   var articlesList = [
   {
-  img: 'img-1',
-  title: 'Прикосновение к истории',
-  description: 'У каждой страны и города своя длинная история и присущий только ей колорит. Людям всегда интересно прикоснуться к древнему миру, где-то когда-то проходило великое сражение или казнили короля.'
+  img: 'article-1',
+  title: 'Комплексная имплантация зубов',
+  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo'
   },
   {
-  img: 'img-1',
-  title: 'Погружение в другую культуру',
-  description: 'За две недели путешествия по культурным центрам можно посмотреть не только музейные экспонаты, а также изучит архитектуру города, попробовать традиционные блюда и познакомится с жизнью местных жителей.'
+  img: 'article-1',
+  title: 'Эстетическая реставрация зубов',
+  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo'
   },
   {
-  img: 'img-1',
-  title: 'Направление на Россию',
-  description: 'За последние несколько лет сфера российского туризма подросла и окрепла. Предложения туроператоров отдохнуть в Москве или Краснодаре не уступают по качеству и стоимости отдыха в Праге.'
+  img: 'article-1',
+  title: 'Пародонтология',
+  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo'
+  }
+  ,
+  {
+  img: 'article-1',
+  title: 'Отбеливание зубов',
+  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo'
   }
   ];
 
 mixin articles-list(list)
   .-articles-list&attributes(attributes)
-    .__row.row
-      each item, index in list
-        .__col.col-xs-12.col-sm-6.col-md-4
-          article.-article-item
-            .__img-wrap
-              img.__img(src=`${paths.imgContent}/articles-list/370x287/img-${index + 1}.jpg`
-              alt='' data-object-fit='cover' onload='objectFit(this)')
-            .__content
-              h3.__title !{item.title}
-              .__description
-                p !{item.description}
-
-      // Spacers
-      .__col.col-xs-12.col-sm-6.col-md-4
-      .__col.col-xs-12.col-sm-6.col-md-4
-      .__col.col-xs-12.col-sm-6.col-md-4
+    each item, index in list
+      article.-article-item
+        +a().__img-wrap
+          img.__img(src=`${paths.imgContent}/articles-list/260x170/article-${index + 1}.jpg`
+          alt='')
+        .__content
+          h3.__title
+            +a().__title-link !{item.title}
+          .__description
+            p !{item.description}
+          +a().__read-more.btn.btn_2 Читать далее

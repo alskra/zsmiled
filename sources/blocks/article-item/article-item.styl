@@ -1,46 +1,67 @@
 .article-item {
-  display flex
-  flex-flow column
-  min-height 100%
-  background white
-  box-shadow 0 0 0 3px #f0f0f0
   p {
     margin 0
   }
 
+  & + & {
+    margin-top rem(20)
+    border-top 2px solid #cacaca
+    padding-top rem(20)
+  }
+
   &__img-wrap {
-    flex none
     display block
     overflow hidden
-    position relative
-    padding-top percentage(287/370)
+    max-width rem(260)
+    margin 0 auto rem(15)
+    &:hover, &:focus {
+      & ~ {r}__content {r}__title-link {
+        color $blue-1
+      }
+    }
   }
 
   &__img {
-    position absolute
-    top 0
-    left 0
+    width 100%
   }
 
   &__content {
-    flex 1 0 auto
-    padding rem(15) rem(18)
+
   }
 
   &__title {
-    overflow hidden
-    font-size rem(24px)
-    font-weight 300
-    line-height 1.25em
-    //max-height 1.25em*2
-    //line-clamp 2
-    margin 0 0 0.4em
+    color $blue-2
+    font-size 16px
+    font-weight 700
+    text-transform uppercase
+    margin 0 0 rem(10)
+  }
+
+  &__title-link {
+    display block
+    color $blue-2
+    text-decoration none
+    &:hover, &:focus {
+      color $blue-1
+      text-decoration none
+    }
   }
 
   &__description {
-    overflow hidden
-    line-height (19/14)em
-    //max-height (19/14)em*5
-    //line-clamp 5
+    margin 0 0 rem(10)
+  }
+
+  @media (min-width $screen-sm-min) {
+    display flex
+
+    &__img-wrap {
+      flex none
+      width rem(260)
+      margin 0 rem(30) 0 0
+    }
+
+    &__content {
+      flex 1 1 auto
+    }
   }
 }

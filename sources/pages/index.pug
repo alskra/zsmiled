@@ -1,5 +1,6 @@
 include ../blocks/doctype/doctype
 include ../blocks/nav-box/nav-box
+include ../blocks/articles-list/articles-list
 
 block variables
   -
@@ -81,6 +82,7 @@ include ../blocks/footer/footer
                   p Индивидуальный подход и авторская реализация любого изделия - девиз команды цифровой дентальной лаборатории  "ZSmile Digital" . Благодаря высокому качеству продукции (протезы, эллайнеры, хирургические шаблоны, индивидуальные абатменты), использованию самого современного оборудования и программного обеспечения, зуботехническая лаборатория «ZSmile Digital» обслуживает не только клиники сети «Здоровая Улыбка», но и другие известные в Москве стоматологические центры.
               section.-section
                 h2.__title Статьи
+                +articles-list(articlesList)
 
             .__col._2.col-xs-12.col-md-3
               .-row
