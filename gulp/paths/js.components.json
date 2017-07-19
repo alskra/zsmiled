@@ -1,0 +1,6 @@
+[
+  "sources/components/modernizr/modernizr-custom.js",
+  "bower_components/jquery/dist/jquery.js",
+  "bower_components/jquery-touch-events/src/jquery.mobile-events.js",
+  "sources/components/slick-carousel/add-on/slick.js"
+]

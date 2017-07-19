@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "glyphicons";
+  src: url('../fonts/glyphicons/glyphicons.eot');
+  src: url('../fonts/glyphicons/glyphicons.eot?#iefix') format('eot'),
+  url('../fonts/glyphicons/glyphicons.woff2') format('woff2'),
+  url('../fonts/glyphicons/glyphicons.woff') format('woff'),
+  url('../fonts/glyphicons/glyphicons.ttf') format('truetype'),
+  url('../fonts/glyphicons/glyphicons.svg#glyphicons') format('svg');
+}
+
+.glyphicon:before {
+  font-family: "glyphicons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.glyphicon-cancel:before {
+  content: "\E001";
+}
+
+.glyphicon-icon-navigation-shapka:before {
+  content: "\E002";
+}
+
+.glyphicon-icon-phone-shapka:before {
+  content: "\E003";
+}
+
+.glyphicon-icon-search:before {
+  content: "\E004";
+}
+
+.glyphicon-menu-button:before {
+  content: "\E005";
+}
+
+.glyphicon-menu-lines:before {
+  content: "\E006";
+}
+
+.glyphicon-menu-options:before {
+  content: "\E007";
+}
+
+.glyphicon-menu:before {
+  content: "\E008";
+}

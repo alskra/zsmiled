@@ -1,0 +1,20 @@
+mixin footer()
+  footer.-footer&attributes(attributes)
+    +nav-box()
+    .-container-fluid
+      .-row
+        .-footer.__col._1.col-xs-12.col-sm-6.col-md-3
+          .-footer.__tel.glyphicon.glyphicon-icon-phone-shapka
+            +a('tel:+74996788081').__tel-item +7 (499) 678-80-81
+        .-footer.__col._2.col-xs-12.col-sm-6.col-md-3
+          .-footer.__time-work
+            strong.__time-work-title График работы лаборатории:
+            | Без выходных с 9:00 до 21:00
+        .-footer.__col._3.col-xs-12.col-sm-6.col-md-3
+          address.-footer.__addr.glyphicon.glyphicon-icon-navigation-shapka г. Москва, Коровинское шоссе, дом 9 к2
+            br
+            +a() Официальная информация
+        .-col-xs-12.col-sm-6.col-md-3
+          .-footer.__logo(title=config.project.name)
+            img.__logo-img(src=`${paths.imgGeneral}/logo.svg` alt=config.project.name)
+    block

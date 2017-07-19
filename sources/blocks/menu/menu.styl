@@ -1,0 +1,41 @@
+.menu
+  display none
+  margin 0 (- $grid-gutter-width/2)
+
+  &__item
+    overflow hidden
+    &_current
+      &>{r}__btn
+        &_lvl_1
+          &, &:hover, &:focus
+            color white
+            background $blue-2
+
+  &__btn
+    display block
+    &_lvl_1
+      color white
+      text-decoration none
+      font-size rem(14)
+      font-weight 700
+      line-height 1.25em
+      text-transform uppercase
+      text-overflow(ellipsis)
+      padding rem(10) ($grid-gutter-width/2)
+      &:hover, &:focus
+        color white
+        text-decoration none
+        background $blue-2
+
+  &__icon
+    display inline-block
+    vertical-align top
+
+  @media (min-width $screen-md-min)
+    display flex !important
+    overflow hidden
+    margin 0 0 0 (- rem(10))
+
+    &__btn
+      &_lvl_1
+        padding rem(10) rem(10)

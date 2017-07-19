@@ -1,0 +1,82 @@
+.header {
+  flex 0 0 auto
+  padding rem(15) 0 0
+
+  &__logo {
+    display block
+    width rem(270)
+    max-width 100%
+    margin 0 auto
+  }
+
+  &__logo-img {
+    display block
+    width 100%
+  }
+
+  &__addr {
+    color $blue-1
+    line-height 1.25em
+    padding 0 0 0 rem(20)
+    position relative
+    margin rem(18) 0 0
+    &:before {
+      color $blue-3
+      font-size rem(16)
+      position absolute
+      top 0
+      left 0
+    }
+  }
+
+  &__col {
+    &_3 {
+      display flex
+    }
+  }
+
+  &__time-work {
+    color black
+    margin rem(16) 0 0
+
+    &-title {
+      display block
+      color $blue-1
+      font-size rem(14)
+    }
+  }
+
+  &__tel {
+    font-size rem(18)
+    font-weight 700
+    padding 0 0 0 rem(20)
+    position relative
+    margin rem(12) 0 0 auto
+    &:before {
+      color $blue-3
+      font-size rem(16)
+      position absolute
+      top 0
+      left 0
+    }
+
+    &-item {
+      text-decoration none
+      &:hover, &:focus {
+        text-decoration none
+      }
+    }
+  }
+
+  @media (min-width $screen-sm-min) {
+    &__logo {
+      margin 0
+    }
+  }
+
+  @media (min-width $screen-md-min) {
+    &__time-work {
+      margin-right rem(30)
+    }
+  }
+}

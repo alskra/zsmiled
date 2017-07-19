@@ -1,0 +1,139 @@
+.footer {
+  flex 0 0 auto
+  padding 0 0 rem(25)
+
+  .nav-box {
+    margin 0 0 rem(15)
+  }
+
+  &__col {
+    &_1 {
+      display flex
+      margin-bottom rem(15)
+    }
+
+    &_2 {
+      display flex
+      margin-bottom rem(15)
+    }
+
+    &_3 {
+      display flex
+      margin-bottom rem(15)
+    }
+  }
+
+  &__logo {
+    display block
+    width rem(206)
+    max-width 100%
+    margin 0 auto
+  }
+
+  &__logo-img {
+    display block
+    width 100%
+  }
+
+  &__addr {
+    color $blue-1
+    line-height 1.25em
+    text-align center
+    padding 0 0 0 rem(20)
+    position relative
+    margin 0 auto
+    &:before {
+      color $blue-3
+      font-size rem(16)
+      position absolute
+      top 0
+      left 0
+    }
+  }
+
+  &__time-work {
+    color black
+    text-align center
+    margin 0 auto
+
+    &-title {
+      display block
+      color $blue-1
+      font-size rem(14)
+    }
+  }
+
+  &__tel {
+    font-size rem(18)
+    font-weight 700
+    text-align center
+    padding 0 0 0 rem(20)
+    position relative
+    margin 0 auto
+    &:before {
+      color $blue-3
+      font-size rem(16)
+      position absolute
+      top 0
+      left 0
+    }
+
+    &-item {
+      text-decoration none
+      &:hover, &:focus {
+        text-decoration none
+      }
+    }
+  }
+
+  @media (min-width $screen-sm-min) {
+    &__col {
+      &_1 {
+        display block
+      }
+
+      &_2 {
+        display block
+      }
+
+      &_3 {
+        display block
+        margin-bottom 0
+      }
+    }
+
+    &__tel {
+      text-align left
+    }
+
+    &__time-work {
+      text-align right
+      margin-top rem(4)
+    }
+
+    &__addr {
+      text-align left
+      margin-top rem(6)
+    }
+
+    &__logo {
+      margin 0 0 0 auto
+    }
+  }
+
+  @media (min-width $screen-md-min) {
+    &__col {
+      &_1 {
+        margin-bottom 0
+      }
+
+      &_2 {
+        margin-bottom 0
+      }
+    }
+
+    &__time-work {
+      text-align left
+    }
+  }
+}

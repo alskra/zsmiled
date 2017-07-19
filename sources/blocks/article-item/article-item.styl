@@ -1,0 +1,46 @@
+.article-item {
+  display flex
+  flex-flow column
+  min-height 100%
+  background white
+  box-shadow 0 0 0 3px #f0f0f0
+  p {
+    margin 0
+  }
+
+  &__img-wrap {
+    flex none
+    display block
+    overflow hidden
+    position relative
+    padding-top percentage(287/370)
+  }
+
+  &__img {
+    position absolute
+    top 0
+    left 0
+  }
+
+  &__content {
+    flex 1 0 auto
+    padding rem(15) rem(18)
+  }
+
+  &__title {
+    overflow hidden
+    font-size rem(24px)
+    font-weight 300
+    line-height 1.25em
+    //max-height 1.25em*2
+    //line-clamp 2
+    margin 0 0 0.4em
+  }
+
+  &__description {
+    overflow hidden
+    line-height (19/14)em
+    //max-height (19/14)em*5
+    //line-clamp 5
+  }
+}
