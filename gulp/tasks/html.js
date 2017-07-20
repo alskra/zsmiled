@@ -38,11 +38,8 @@ module.exports = function () {
                         modDlmtr: '_'
                     })
                 ]),
-                $.gp.rename(function (path) {
-                    path.extname = ".html"
-                }),
                 $.map(function (file, cb) {cb(null, getBlocksObj(file))}),
-                $.gp.htmlBeautify({indent_size: 2}),
+                $.gp.htmlBeautify({indent_size: 2, wrap_line_length: 0, brace_style: 'expand'}),
                 $.gp.debug({title: 'DEBUG "html": '}),
                 $.gulp.dest('build/')
             ).on('error', $.gp.notify.onError(function(err) {

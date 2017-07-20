@@ -29,9 +29,11 @@ mixin doctype(title)
       block
       // JS
       //-script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4')
+      //-<script src="https://cdn.jsdelivr.net/jquery.goodshare.js/4/goodshare.min.js"></script>
       if isDevelopment
         script(src="static/js/components.js")
         script(src="static/js/blocks.js")
       else
         script(src="static/js/main.min.js" async)
+      // SVG
       include ../../helpers/svg.pug

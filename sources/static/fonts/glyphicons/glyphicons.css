@@ -35,30 +35,58 @@
   content: "\E003";
 }
 
-.glyphicon-icon-navigation-shapka:before {
+.glyphicon-fb:before {
   content: "\E004";
 }
 
-.glyphicon-icon-phone-shapka:before {
+.glyphicon-icon-navigation-shapka:before {
   content: "\E005";
 }
 
-.glyphicon-icon-search:before {
+.glyphicon-icon-phone-shapka:before {
   content: "\E006";
 }
 
-.glyphicon-menu-button:before {
+.glyphicon-icon-search:before {
   content: "\E007";
 }
 
-.glyphicon-menu-lines:before {
+.glyphicon-ins:before {
   content: "\E008";
 }
 
-.glyphicon-menu-options:before {
+.glyphicon-menu-button:before {
   content: "\E009";
 }
 
-.glyphicon-menu:before {
+.glyphicon-menu-lines:before {
   content: "\E00A";
+}
+
+.glyphicon-menu-options:before {
+  content: "\E00B";
+}
+
+.glyphicon-menu:before {
+  content: "\E00C";
+}
+
+.glyphicon-ok:before {
+  content: "\E00D";
+}
+
+.glyphicon-star:before {
+  content: "\E00E";
+}
+
+.glyphicon-to-top:before {
+  content: "\E00F";
+}
+
+.glyphicon-vk:before {
+  content: "\E010";
+}
+
+.glyphicon-yt:before {
+  content: "\E011";
 }

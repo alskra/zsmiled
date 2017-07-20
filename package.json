@@ -9,7 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "goodshare.js": ""
+    "goodshare.js": "",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-htmltidy": "^0.2.3",
+    "gulp-jsbeautifier": "^2.1.1"
   },
   "devDependencies": {
     "autoprefixer-stylus": "",
