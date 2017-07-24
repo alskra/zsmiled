@@ -39,7 +39,7 @@ module.exports = function () {
                     })
                 ]),
                 $.map(function (file, cb) {cb(null, getBlocksObj(file))}),
-                $.gp.htmlBeautify({indent_size: 2, wrap_line_length: 0, brace_style: 'expand'}),
+                $.gp.htmlBeautify({indent_size: 2, wrap_line_length: 0}),
                 $.gp.debug({title: 'DEBUG "html": '}),
                 $.gulp.dest('build/')
             ).on('error', $.gp.notify.onError(function(err) {
